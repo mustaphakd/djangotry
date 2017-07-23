@@ -1,0 +1,13 @@
+
+		<a data-hover="Back home" href="{% url 'index' %}">Home</a>
+	<br /> <br />
+
+{% if entity_list %}
+	<ul>
+	{% for entity in entity_list %}
+		<li> {{entity.name_email}} </li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p> please create at least one entity </p>
+{% endif %}
